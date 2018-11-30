@@ -1,0 +1,7 @@
+/build-Motor_test-Desktop_Qt_5_8_0_MSVC2015_64bit-Debug
+/build-Motor_test-Desktop_Qt_5_8_0_MSVC2015_64bit-Release
+/demo
+/ProjectTree/debug
+/ProjectTree/release
+/ProjectTree/*.Debug
+/ProjectTree/*.Release
