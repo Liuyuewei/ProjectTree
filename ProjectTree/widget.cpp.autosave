@@ -52,8 +52,8 @@ void Widget::creatDirectory()
         //创建文件夹
         tempDir.mkdir(Widget::projectName);
         qDebug() << "创建该文件夹" << endl;
-
-
+        
+        
     }
 
 

@@ -12,6 +12,11 @@ class Widget : public QWidget
     Q_OBJECT
 
 public:
+    //项目文件名
+    QString projectName;
+
+    //创建文件夹路径
+    void creatDirectory();
     explicit Widget(QWidget *parent = 0);
     ~Widget();
 

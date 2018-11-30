@@ -43,7 +43,7 @@
    <property name="title">
     <string/>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -61,7 +61,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEditName"/>
+      <widget class="QLineEdit" name="lineEditProName"/>
      </item>
     </layout>
    </widget>
@@ -78,7 +78,7 @@
      <string>...</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -104,7 +104,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -126,18 +126,11 @@
      </item>
     </layout>
    </widget>
-   <zorder>pushButtonConfirm</zorder>
-   <zorder>lineEditName</zorder>
-   <zorder>label_2</zorder>
-   <zorder>lineEditDirpah</zorder>
-   <zorder>label_3</zorder>
-   <zorder>pushButtonDelet</zorder>
-   <zorder>pushButtonDirSlect</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
    <zorder>pushButtonDirSlect</zorder>
   </widget>
-  <zorder>label</zorder>
-  <zorder>groupBox</zorder>
-  <zorder>lineEditDirpah</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
