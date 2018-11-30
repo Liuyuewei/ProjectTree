@@ -1,6 +1,5 @@
 #include "widget.h"
 #include "ui_widget.h"
-#include <QDir>     //包含文件夹相关类
 #include <QDebug>
 #include <QFileDialog>
 #include <QDesktopServices>
@@ -27,7 +26,7 @@ Widget::~Widget()
 //创建文件夹
 void Widget::creatDirectory()
 {
-    QDir tempDir;
+
     //临时保存程序当前路径
     QString currentDir = tempDir.currentPath();
     qDebug() << currentDir << endl;
@@ -45,17 +44,6 @@ void Widget::creatDirectory()
     ui->lineEditDirpah->setText(dirName + "/" + Widget::projectName);
     //进入到该路径
     tempDir.cd(dirName);
-    //如果路径不存在，则创建它
-    if(!tempDir.exists(Widget::projectName))
-    {
-        qDebug() << "该路径不存在" << endl;
-        //创建文件夹
-        tempDir.mkdir(Widget::projectName);
-        qDebug() << "创建该文件夹" << endl;
-
-
-    }
-
 
 }
 //打开计算机选择路径
@@ -69,7 +57,29 @@ void Widget::on_pushButtonDirSlect_clicked()
 //确认按键
 void Widget::on_pushButtonConfirm_clicked()
 {
+    QString currentDir;
+    //如果路径不存在，则创建它
+    if(!tempDir.exists(Widget::projectName))
+    {
+        qDebug() << "该路径不存在" << endl;
+        //创建文件夹
+        tempDir.mkdir(Widget::projectName);
+        qDebug() << "创建该文件夹" << endl;
+        //获取当前路径
+        currentDir = tempDir.currentPath();
+        currentDir += "/";
+        currentDir += Widget::projectName;
+        qDebug() << currentDir << endl;
+        //跳到当前路径
+        tempDir.cd(currentDir);
+        //创建文件夹
+        if(!tempDir.exists("Design"))
+        tempDir.mkdir("Design");
+        if(!tempDir.exists("项目计划"))
+        tempDir.mkdir("项目计划");
 
+    }
+    this->close();
 }
 //取消按键
 void Widget::on_pushButtonDelet_clicked()

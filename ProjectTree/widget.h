@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include <QDir>     //包含文件夹相关类
 
 namespace Ui {
 class Widget;
@@ -12,6 +13,7 @@ class Widget : public QWidget
     Q_OBJECT
 
 public:
+    QDir tempDir;
     //项目文件名
     QString projectName;
 
