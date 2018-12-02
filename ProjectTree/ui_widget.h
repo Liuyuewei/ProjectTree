@@ -41,12 +41,16 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_2;
     QLineEdit *lineEditDirpah;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *label_4;
+    QLineEdit *lineEditState;
 
     void setupUi(QWidget *Widget)
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QStringLiteral("Widget"));
-        Widget->resize(284, 191);
+        Widget->resize(284, 209);
         label = new QLabel(Widget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(70, 10, 141, 21));
@@ -55,7 +59,7 @@ public:
         label->setFont(font);
         groupBox = new QGroupBox(Widget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(10, 40, 261, 141));
+        groupBox->setGeometry(QRect(10, 40, 261, 131));
         layoutWidget = new QWidget(groupBox);
         layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
         layoutWidget->setGeometry(QRect(30, 20, 201, 22));
@@ -117,6 +121,24 @@ public:
         layoutWidget->raise();
         layoutWidget->raise();
         pushButtonDirSlect->raise();
+        widget = new QWidget(Widget);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(10, 180, 165, 22));
+        horizontalLayout_4 = new QHBoxLayout(widget);
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        label_4 = new QLabel(widget);
+        label_4->setObjectName(QStringLiteral("label_4"));
+
+        horizontalLayout_4->addWidget(label_4);
+
+        lineEditState = new QLineEdit(widget);
+        lineEditState->setObjectName(QStringLiteral("lineEditState"));
+
+        horizontalLayout_4->addWidget(lineEditState);
+
 
         retranslateUi(Widget);
 
@@ -133,6 +155,7 @@ public:
         pushButtonConfirm->setText(QApplication::translate("Widget", "\347\241\256\350\256\244", Q_NULLPTR));
         pushButtonDelet->setText(QApplication::translate("Widget", "\345\217\226\346\266\210", Q_NULLPTR));
         label_2->setText(QApplication::translate("Widget", "\351\241\271\347\233\256\350\267\257\345\276\204\357\274\232", Q_NULLPTR));
+        label_4->setText(QApplication::translate("Widget", "\347\212\266\346\200\201\357\274\232", Q_NULLPTR));
     } // retranslateUi
 
 };

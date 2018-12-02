@@ -17,6 +17,9 @@ public:
     //项目文件名
     QString projectName;
 
+    //定义一个文件夹路径
+    QString dirName;
+
     //创建文件夹路径
     void creatDirectory();
     explicit Widget(QWidget *parent = 0);

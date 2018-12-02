@@ -29,3 +29,8 @@ SOURCES += main.cpp\
 HEADERS  += widget.h
 
 FORMS    += widget.ui
+
+
+# disable C4819 warning
+#取消C4819警告
+QMAKE_CXXFLAGS_WARN_ON += -wd4819
