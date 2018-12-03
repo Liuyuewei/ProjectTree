@@ -73,31 +73,32 @@ void Widget::on_pushButtonConfirm_clicked()
             //创建文件夹
             tempDir.mkdir(Widget::projectName);
             qDebug() << "创建该文件夹" << endl;
-            //获取当前路径
-    //        currentDir = tempDir.currentPath();
-    //        currentDir += "/";
-    //        currentDir += Widget::projectName;
-    //        qDebug() << currentDir << endl;
-            //跳到当前路径
-    //        tempDir.setPath(dirName + "/" + Widget::projectName);
-    //        //创建文件夹
-    //        if(!tempDir.exists("Design"))
-    //        tempDir.mkdir("Design");
-    //        if(!tempDir.exists("项目计划"))
-    //        tempDir.mkdir("项目计划");
-
-    //        currentDir = tempDir.currentPath();
-    //        qDebug() << "是否进入相应目录" << currentDir << endl;
-    //        QDir dir(currentDir);
-            currentDir += "/" + Widget::projectName + "/";
-            tempDir.mkpath(currentDir + "Design");//创建多级目录
-            tempDir.mkpath(currentDir + "ProPlan");//创建多级目录
-            tempDir.mkpath(currentDir + "ProReq");//创建多级目录
-
-            currentDir = currentDir + "/" + "Design" + "/";
-            tempDir.mkpath(currentDir + "HardWare");//创建多级目录
-            tempDir.mkpath(currentDir + "SoftWare");//创建多级目录
         }
+            //获取当前路径
+//        currentDir = tempDir.currentPath();
+//        currentDir += "/";
+//        currentDir += Widget::projectName;
+//        qDebug() << currentDir << endl;
+        //跳到当前路径
+//        tempDir.setPath(dirName + "/" + Widget::projectName);
+//        //创建文件夹
+//        if(!tempDir.exists("Design"))
+//        tempDir.mkdir("Design");
+//        if(!tempDir.exists("项目计划"))
+//        tempDir.mkdir("项目计划");
+
+//        currentDir = tempDir.currentPath();
+//        qDebug() << "是否进入相应目录" << currentDir << endl;
+//        QDir dir(currentDir);
+        currentDir += "/" + Widget::projectName + "/";
+        tempDir.mkpath(currentDir + "Design");//创建多级目录
+        tempDir.mkpath(currentDir + "ProPlan");//创建多级目录
+        tempDir.mkpath(currentDir + "ProReq");//创建多级目录
+
+        currentDir = currentDir + "/" + "Design" + "/";
+        tempDir.mkpath(currentDir + "HardWare");//创建多级目录
+        tempDir.mkpath(currentDir + "SoftWare");//创建多级目录
+
         this->close();
     }
     else
