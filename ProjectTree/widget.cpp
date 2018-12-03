@@ -74,22 +74,6 @@ void Widget::on_pushButtonConfirm_clicked()
             tempDir.mkdir(Widget::projectName);
             qDebug() << "创建该文件夹" << endl;
         }
-            //获取当前路径
-//        currentDir = tempDir.currentPath();
-//        currentDir += "/";
-//        currentDir += Widget::projectName;
-//        qDebug() << currentDir << endl;
-        //跳到当前路径
-//        tempDir.setPath(dirName + "/" + Widget::projectName);
-//        //创建文件夹
-//        if(!tempDir.exists("Design"))
-//        tempDir.mkdir("Design");
-//        if(!tempDir.exists("项目计划"))
-//        tempDir.mkdir("项目计划");
-
-//        currentDir = tempDir.currentPath();
-//        qDebug() << "是否进入相应目录" << currentDir << endl;
-//        QDir dir(currentDir);
         currentDir += "/" + Widget::projectName + "/";
         tempDir.mkpath(currentDir + "Design");//创建多级目录
         tempDir.mkpath(currentDir + "ProPlan");//创建多级目录
@@ -108,8 +92,6 @@ void Widget::on_pushButtonConfirm_clicked()
         ui->lineEditState->setText("请选择项目名称!");
         else if(NULL == dirName)
         ui->lineEditState->setText("请选择项目路径!");
-//        ui->lineEditState->setText("Place chose project directory!");
-
     }
 
 }
